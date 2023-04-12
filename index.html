@@ -12,15 +12,22 @@
     <header>
         <img class="imagem-logo" src="/img/logoA.png" alt="Logo">
     </header>
-    <section>
-        <input class="texto" type="text" placeholder="Digite seu texto">
-        <p class="observacao-texto"><img src="/img/exclamacao.svg" alt="imagem-exclamação"> Apenas letras minúsculas e sem acento.</p>
-        <button>Criptografar</button>
-        <button>Descriptografar</button>
-
+    
+    <section class="conteudo">
+        <div class="conteudo-principal">
+            <input class="texto" type="text" placeholder="Digite seu texto">
+            <div class="botoes-conteudo">
+                <p class="observacao-texto"><img src="/img/exclamacao.svg" alt="imagem-exclamação"> Apenas letras minúsculas e sem acento.</p>
+                <button class="button-criptogra">Criptografar</button>
+                <button class="button-descripto">Descriptografar</button>
+            </div>
+        </div>
+       
         <div class="caixa-mensagem">
             <div class="caixa-descricao">
-                <img src="/img/ImagemCaixaMensagem.svg" alt="Imagem de pesquisa">
+                <div class="caixa-imagem-mensagem">
+                    <img class="imagem-mensagem" src="/img/ImagemCaixaMensagem.svg" alt="Imagem de pesquisa">
+                </div>
                 <h2 class="descricao-titulo">Nenhuma mensagem encontrada</h2>
                 <p class="descricao-mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
