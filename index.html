@@ -15,21 +15,26 @@
     
     <section class="conteudo">
         <div class="conteudo-principal">
-            <input class="texto" type="text" placeholder="Digite seu texto">
+            <input class="input-texto" type="text" placeholder="Digite seu texto">
             <div class="botoes-conteudo">
                 <p class="observacao-texto"><img src="/img/exclamacao.svg" alt="imagem-exclamação"> Apenas letras minúsculas e sem acento.</p>
-                <button class="button-criptogra">Criptografar</button>
+                <button class="button-criptogra" onclick="botaoCryptografar()">Criptografar</button>
                 <button class="button-descripto">Descriptografar</button>
             </div>
         </div>
        
         <div class="caixa-mensagem">
-            <div class="caixa-descricao">
+            <!--<div class="caixa-descricao">
                 <div class="caixa-imagem-mensagem">
                     <img class="imagem-mensagem" src="/img/ImagemCaixaMensagem.svg" alt="Imagem de pesquisa">
                 </div>
                 <h2 class="descricao-titulo">Nenhuma mensagem encontrada</h2>
                 <p class="descricao-mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <p class="mensagem"></p>
+            </div>-->
+
+            <div class="caixa-mensagem-crypto">
+                <textarea class="mensagem-textoarea" name="" id="" cols="30" rows="10"></textarea>
             </div>
         </div>
     </section>
@@ -37,5 +42,7 @@
     <footer>
         <p>Desenvolvedor - Tiago Silva 2023</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

@@ -26,14 +26,14 @@ body {
     align-items: center;
 }
 
-.texto {
+.input-texto {
     width: 377px;
     padding: 7px;
     font-size: 18px;
     margin-top: 63px;
 }
 
-.texto::placeholder {
+.input-texto::placeholder {
     color: #0A3871;
 }
 
@@ -123,4 +123,8 @@ footer p {
     font-weight: bold;
     padding: 22px;
     margin-bottom: 0;
+}
+
+.hide {
+    display: none;
 }
