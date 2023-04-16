@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Decodificador - Alura Challenge ONE</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -19,28 +19,30 @@
             <div class="botoes-conteudo">
                 <p class="observacao-texto"><img src="/img/exclamacao.svg" alt="imagem-exclamação"> Apenas letras minúsculas e sem acento.</p>
                 <button class="button-criptogra" onclick="botaoCryptografar()">Criptografar</button>
-                <button class="button-descripto">Descriptografar</button>
+                <button class="button-descripto" onclick="botaoDescryptografa()">Descriptografar</button>
             </div>
         </div>
        
         <div class="caixa-mensagem">
-            <!--<div class="caixa-descricao">
+            <div class="caixa-descricao">
                 <div class="caixa-imagem-mensagem">
                     <img class="imagem-mensagem" src="/img/ImagemCaixaMensagem.svg" alt="Imagem de pesquisa">
                 </div>
                 <h2 class="descricao-titulo">Nenhuma mensagem encontrada</h2>
                 <p class="descricao-mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
-                <p class="mensagem"></p>
-            </div>-->
+            </div>
 
             <div class="caixa-mensagem-crypto">
-                <textarea class="mensagem-textoarea" name="" id="" cols="30" rows="10"></textarea>
+                <textarea class="mensagem-textoarea" name="" id="" cols="30" rows="20" readonly></textarea>
+                <button class="botao-copiar">Copiar</button>
             </div>
         </div>
     </section>
 
     <footer>
         <p>Desenvolvedor - Tiago Silva 2023</p>
+        <a href="https://github.com/tiagobsb84/Desafio-aplicacao-Modificador_Texto" target="_blank"><img class="imagem-rede-social" src="/img/icon-git.svg" alt="Github"></a>
+        <a href="https://www.linkedin.com/in/tiago-silva-b11350197/" target="_blank"><img class="imagem-rede-social" src="/img/icon-linkedin.svg" alt="Linkedin"></a>
     </footer>
 
     <script src="main.js"></script>

@@ -31,10 +31,12 @@ body {
     padding: 7px;
     font-size: 18px;
     margin-top: 63px;
+    border-radius: 5px;
 }
 
 .input-texto::placeholder {
     color: #0A3871;
+    opacity: 0.3;
 }
 
 .observacao-texto {
@@ -62,12 +64,24 @@ button {
     background: #0A3871;
     color: white;
     border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-criptogra:hover {
+    background: #031e41;
 }
 
 .button-descripto {
     background: #D8DFE8;
     border: 1px solid #0A3871;
     color: #000000;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-descripto:hover {
+    background-color: rgb(144, 181, 206);
 }
 
 .caixa-mensagem {
@@ -113,6 +127,10 @@ button {
     color: #495057;
 }
 
+.mensagem-textoarea {
+    border-radius: 5px;
+}
+
 footer {
     text-align: center;
     
@@ -121,8 +139,48 @@ footer {
 
 footer p {
     font-weight: bold;
-    padding: 22px;
-    margin-bottom: 0;
+    padding: 5px;
+    margin-bottom: 0px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.imagem-rede-social {
+    width: 46px;
+    opacity: 0.4;
+}
+
+.imagem-rede-social:hover {
+    opacity: 1;
+}
+
+.caixa-mensagem-crypto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-copiar {
+    margin-top: 88px;
+    background: #2376b1;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.botao-copiar:hover {
+    background: #3d6497;
+}
+
+.caixa-mensagem-crypto {
+    display: none;
 }
 
 .hide {

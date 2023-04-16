@@ -1,17 +1,33 @@
 var inputTexto = document.querySelector(".input-texto");
-
 var mensagemTextArea = document.querySelector(".mensagem-textoarea");
+
+var textoCrypt = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
 function botaoCryptografar() {
     const textoCryptografado = cryptografaTexto(inputTexto.value);
     mensagemTextArea.value = textoCryptografado;
-
+    inputTexto.value = '';
+    ocultarImagem();
+    apareceCaixaMensagem();
     console.log(textoCryptografado);
+}  
+
+function botaoDescryptografa() {
+    const textoDescryptografado = descryptografaTexto(inputTexto.value);
+    mensagemTextArea.value = textoDescryptografado;
+    inputTexto.value = '';
+    console.log(textoDescryptografado);
 }
-    
+
+function ocultarImagem() {
+    document.querySelector('.caixa-descricao').classList.add('hide');
+}
+
+function apareceCaixaMensagem() {
+    document.querySelector('.caixa-mensagem-crypto').classList.toggle('caixa-mensagem-crypto');
+}
 
 function cryptografaTexto(stringCripto) {
-    let textoCrypt = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
 
     stringCripto = stringCripto.toLowerCase();
 
@@ -25,48 +41,16 @@ function cryptografaTexto(stringCripto) {
     return stringCripto;
 }
 
+function descryptografaTexto(stringDescripto) {
 
+    stringDescripto = stringDescripto.toLowerCase();
 
-/*var a = "abag";
-var b = "bodi";
-var c = "cord";*/
-
-/*function ocultarImagem() {
-    document.querySelector('.caixa-descricao').classList.add('hide');
-}
-
-var button = document.querySelector('.button-criptogra');
-
-document.body.addEventListener('keyup', (event) => {
-    var code = event.code;
-
-    var strings = [];
-
-    var texto = "";
-    
-        switch(code){
-            case 'KeyA':
-                var a = texto.replace("a", "ali");
-                console.log(a.value);
-                break;
-            case 'KeyB':
-                var b = texto.replace("b", "bas");
-                console.log(b);
-                break;
-            case 'KeyC':
-                var c = texto.replace("c", "casg");
-                console.log(c);
-                break;
+    for(let i = 0; i < textoCrypt.length; i++) {
+        console.log(textoCrypt[i])
+        if(stringDescripto.includes(textoCrypt[i][0])) {
+            stringDescripto = stringDescripto.replaceAll(textoCrypt[i][1], textoCrypt[i][0]);
         }
+    }
 
-    
-})*/
-
-/*button.addEventListener('click', function (e) {
-    if(e.code == '')
-    e.preventDefault();
-    var inputTexto = document.querySelector('.texto');
-    var valor = inputTexto.value.toUpperCase();
-    ocultarImagem();
-    console.log(valor);
-})*/
+    return stringDescripto;
+} 
