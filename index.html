@@ -24,7 +24,7 @@
         </div>
        
         <div class="caixa-mensagem">
-            <div class="caixa-descricao">
+            <div class="caixa-descricao" id="caixa-mensagem-nao-encontrada">
                 <div class="caixa-imagem-mensagem">
                     <img class="imagem-mensagem" src="/img/ImagemCaixaMensagem.svg" alt="Imagem de pesquisa">
                 </div>
@@ -32,9 +32,9 @@
                 <p class="descricao-mensagem">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
 
-            <div class="caixa-mensagem-crypto">
-                <textarea class="mensagem-textoarea" name="" id="" cols="30" rows="20" readonly></textarea>
-                <button class="botao-copiar">Copiar</button>
+            <div class="caixa-mensagem-crypto" id="caixa-mensagem-texto-cripto">
+                <textarea class="mensagem-textoarea" name="" id="" cols="30" rows="20" readonly=""></textarea>
+                <button class="botao-copiar" onclick="botaoCopiar()">Copiar</button>
             </div>
         </div>
     </section>

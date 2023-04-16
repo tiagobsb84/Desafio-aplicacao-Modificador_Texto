@@ -5,28 +5,38 @@ var textoCrypt = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u
 
 function botaoCryptografar() {
     const textoCryptografado = cryptografaTexto(inputTexto.value);
-    mensagemTextArea.value = textoCryptografado;
+    mensagemTextArea.innerHTML = textoCryptografado;
     inputTexto.value = '';
     ocultarImagem();
-    apareceCaixaMensagem();
     console.log(textoCryptografado);
 }  
 
 function botaoDescryptografa() {
     const textoDescryptografado = descryptografaTexto(inputTexto.value);
-    mensagemTextArea.value = textoDescryptografado;
+    mensagemTextArea.innerHTML = textoDescryptografado;
     inputTexto.value = '';
+    ocultarImagem();
     console.log(textoDescryptografado);
 }
 
-function ocultarImagem() {
-    document.querySelector('.caixa-descricao').classList.add('hide');
+function ocultarImagem(validador) {
+    var oculta = document.querySelector("#caixa-mensagem-nao-encontrada");
+    var mostra = document.querySelector("#caixa-mensagem-texto-cripto");
+
+    if(!validador) {
+        mostra.style.display = "flex";
+        oculta.style.display = "none";
+        validador = true;
+
+    } else {
+        mostrar.style.display = "none";
+        ocultar.style.display = "flex";
+        validador = false;
+
+    }
 }
 
-function apareceCaixaMensagem() {
-    document.querySelector('.caixa-mensagem-crypto').classList.toggle('caixa-mensagem-crypto');
-}
-
+//Função para criptografa
 function cryptografaTexto(stringCripto) {
 
     stringCripto = stringCripto.toLowerCase();
@@ -41,6 +51,7 @@ function cryptografaTexto(stringCripto) {
     return stringCripto;
 }
 
+//Função para descriptografar
 function descryptografaTexto(stringDescripto) {
 
     stringDescripto = stringDescripto.toLowerCase();
@@ -53,4 +64,14 @@ function descryptografaTexto(stringDescripto) {
     }
 
     return stringDescripto;
-} 
+}
+
+//Copiar
+function botaoCopiar() {
+    var textoAreaMensagem = mensagemTextArea.innerHTML;
+    navigator.clipboard.writeText(textoAreaMensagem);
+
+    console.log(textoAreaMensagem);
+
+    alert("Texto copiado com sucesso!");
+}
