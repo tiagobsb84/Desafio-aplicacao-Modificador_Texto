@@ -2,8 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-
-    height: 100%;
+    height: 100vh;
     background-image: linear-gradient(11deg, #c9deedd9, transparent);
 }
 
@@ -16,25 +15,22 @@ body {
 
 .conteudo {
     display: flex;
-    width: 960px;
-    margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .conteudo-principal {
-    width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: inherit;
     align-items: center;
 }
 
 .input-texto {
-    width: 377px;
     padding: 7px;
     font-size: 18px;
-    margin-top: 63px;
     border-radius: 5px;
+    resize: none;
+    text-align: center;
 }
 
 .input-texto::placeholder {
@@ -68,6 +64,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    font-weight: bold;
     transition: 0.4s;
 }
 
@@ -80,6 +77,7 @@ button {
     border: 1px solid #0A3871;
     color: #000000;
     cursor: pointer;
+    font-weight: bold;
     transition: 0.4s;
 }
 
@@ -89,7 +87,6 @@ button {
 
 .caixa-mensagem {
     width: 312px;
-    height: 455px;
     border: none;
     border-radius: 20px;
     box-shadow: 0px 24px 32px 8px rgba(0, 0, 0, 0.08);
@@ -132,23 +129,48 @@ button {
 
 .mensagem-textoarea {
     border-radius: 5px;
+    padding: 7px;
+    resize: none;
 }
 
-footer {
-    text-align: center;
-    
+.caixa-mensagem-crypto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-copiar {
+    background: #2376b1;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 24px;
+    margin-bottom: 14px;
+}
+
+.botao-copiar:hover {
+    background: #3d6497;
+}
+
+/* footer */
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #c9deedd9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
     font-weight: bold;
-    padding: 5px;
-    margin-bottom: 0px;
     font-family: 'Inter', sans-serif;
-    display: flex;
-    align-items: center;
     text-align: center;
-    justify-content: center;
 }
 
 .imagem-rede-social {
@@ -161,31 +183,72 @@ footer p {
 }
 
 .caixa-mensagem-crypto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.botao-copiar {
-    margin-top: 88px;
-    background: #2376b1;
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.botao-copiar:hover {
-    background: #3d6497;
-}
-
-.caixa-mensagem-crypto {
     display: none;
 }
 
 .hide {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        height: 100%;
+    }
+
+    .imagem-logo {
+        width: 20px;
+        height: 32px;
+    }
+
+    .conteudo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .input-texto {
+        width: 100%;
+    }
+
+    .botoes-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botes-cript-descript {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .button-criptogra {
+        width: 100%;
+    }
+
+    .button-descripto {
+        width: 100%;
+    }
+
+    .caixa-mensagem {
+        margin-top: 20px;
+    }
+
+    .caixa-imagem-mensagem {
+        display: none;        
+    }
+
+    .botao-copiar {
+        width: 100%;
+    }
+
+    .rodape {
+        position: relative;
+        margin-top: 10px;
+    }
+
 }

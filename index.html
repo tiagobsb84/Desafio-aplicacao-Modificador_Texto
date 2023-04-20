@@ -15,11 +15,13 @@
     
     <section class="conteudo">
         <div class="conteudo-principal">
-            <input class="input-texto" type="text" placeholder="Digite seu texto">
+            <textarea class="input-texto" type="text" cols="20" rows="10" placeholder="Digite seu texto"></textarea>
             <div class="botoes-conteudo">
                 <p class="observacao-texto"><img src="/img/exclamacao.svg" alt="imagem-exclamação"> Apenas letras minúsculas e sem acento.</p>
-                <button class="button-criptogra" onclick="botaoCryptografar()">Criptografar</button>
-                <button class="button-descripto" onclick="botaoDescryptografa()">Descriptografar</button>
+                <div class="botes-cript-descript">
+                    <button class="button-criptogra" onclick="botaoCryptografar()">Criptografar</button>
+                    <button class="button-descripto" onclick="botaoDescryptografa()">Descriptografar</button>
+                </div>
             </div>
         </div>
        
@@ -39,7 +41,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="rodape">
         <p>Desenvolvido - Tiago Silva 2023</p>
         <a href="https://github.com/tiagobsb84/Desafio-aplicacao-Modificador_Texto" target="_blank"><img class="imagem-rede-social" src="/img/icon-git.svg" alt="Github"></a>
         <a href="https://www.linkedin.com/in/tiago-silva-b11350197/" target="_blank"><img class="imagem-rede-social" src="/img/icon-linkedin.svg" alt="Linkedin"></a>
