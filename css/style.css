@@ -235,7 +235,7 @@ footer p {
     }
 
     .input-texto {
-        width: 100%;
+        width: 96%;
     }
 
     .botoes-conteudo {
@@ -251,11 +251,10 @@ footer p {
         width: 100%;
     }
 
-    .button-criptogra {
-        width: 100%;
-    }
-
-    .button-descripto {
+    .button-criptogra, 
+    .button-descripto,
+    .botao-copiar,
+    #colarText {
         width: 100%;
     }
 
@@ -265,10 +264,6 @@ footer p {
 
     .caixa-imagem-mensagem {
         display: none;        
-    }
-
-    .botao-copiar {
-        width: 100%;
     }
 
     .rodape {
