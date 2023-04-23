@@ -1,5 +1,6 @@
 var inputTexto = document.querySelector(".input-texto");
 var mensagemTextArea = document.querySelector(".mensagem-textoarea");
+var colarTextoCrypto = document.querySelector("#colarText");
 
 var textoCrypt = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
@@ -8,7 +9,6 @@ function botaoCryptografar() {
     mensagemTextArea.innerHTML = textoCryptografado;
     inputTexto.value = '';
     ocultarImagem();
-    console.log(textoCryptografado);
 }  
 
 function botaoDescryptografa() {
@@ -16,7 +16,8 @@ function botaoDescryptografa() {
     mensagemTextArea.innerHTML = textoDescryptografado;
     inputTexto.value = '';
     ocultarImagem();
-    console.log(textoDescryptografado);
+
+    colarTextoCrypto.style.display = "none";
 }
 
 function ocultarImagem(validador) {
@@ -57,7 +58,6 @@ function descryptografaTexto(stringDescripto) {
     stringDescripto = stringDescripto.toLowerCase();
 
     for(let i = 0; i < textoCrypt.length; i++) {
-        console.log(textoCrypt[i])
         if(stringDescripto.includes(textoCrypt[i][0])) {
             stringDescripto = stringDescripto.replaceAll(textoCrypt[i][1], textoCrypt[i][0]);
         }
@@ -71,7 +71,13 @@ function botaoCopiar() {
     var textoAreaMensagem = mensagemTextArea.innerHTML;
     navigator.clipboard.writeText(textoAreaMensagem);
 
-    console.log(textoAreaMensagem);
-
     alert("Texto copiado com sucesso!");
+
+    colarTextoCrypto.style.display = "flex";
+}
+
+// botao colar
+function botaoColar() {
+    var textoAreaPrincipal = inputTexto.innerHTML;
+    navigator.clipboard.readText().then((txt) => (inputTexto.value = txt));
 }
