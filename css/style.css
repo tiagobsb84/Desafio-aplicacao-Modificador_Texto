@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box; 
     height: 100vh;
-    background-image: linear-gradient(to top, #c9deedd9, transparent);
+    background-image: linear-gradient(to top, #c9deedd9 50%, transparent);
 }
 
 .imagem-logo {
@@ -57,6 +57,18 @@ button {
     width: 150px;
     padding: 10px;
     border-radius: 14px;
+}
+
+.valida__texto__descriptografar,
+.valida__texto__criptografar {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.valida__texto__criptografar,
+.valida__texto__descriptografar {
+    display: none;
 }
 
 .button-criptogra {

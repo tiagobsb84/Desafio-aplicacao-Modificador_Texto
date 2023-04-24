@@ -1,10 +1,20 @@
 var inputTexto = document.querySelector(".input-texto");
 var mensagemTextArea = document.querySelector(".mensagem-textoarea");
 var colarTextoCrypto = document.querySelector("#colarText");
+var validaCriptogra = document.querySelector(".valida__texto__criptografar");
+var validaDescriptogra = document.querySelector(".valida__texto__descriptografar");
 
 var textoCrypt = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 
 function botaoCryptografar() {
+    if(inputTexto.value.length == 0) {
+        validaCriptogra.style.display = 'flex';
+
+        return false;
+    } else {
+        validaCriptogra.style.display = 'none';
+    }
+
     const textoCryptografado = cryptografaTexto(inputTexto.value);
     mensagemTextArea.innerHTML = textoCryptografado;
     inputTexto.value = '';
@@ -12,6 +22,14 @@ function botaoCryptografar() {
 }  
 
 function botaoDescryptografa() {
+    if(inputTexto.value.length == 0) {
+        validaDescriptogra.style.display = 'flex';
+
+        return false;
+    } else {
+        validaDescriptogra.style.display = 'none';
+    }
+
     const textoDescryptografado = descryptografaTexto(inputTexto.value);
     mensagemTextArea.innerHTML = textoDescryptografado;
     inputTexto.value = '';
